@@ -9,7 +9,58 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build with Make
+    - name: Install Autotools
+      run: sudo apt-get install -y automake autoconf
+    - name: Build with Autotools
       run: |
+        ./configure
         make
-        ./main
+        make dist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
