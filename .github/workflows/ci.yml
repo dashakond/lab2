@@ -17,6 +17,26 @@ jobs:
         make
         make dist
         dpkg-buildpackage -us -uc
+    - name: Run Tests
+      run: make check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
