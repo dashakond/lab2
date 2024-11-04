@@ -9,13 +9,31 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Autotools
-      run: sudo apt-get install -y automake autoconf
+    - name: Install Dependencies
+      run: sudo apt-get install -y automake autoconf dpkg-dev
     - name: Build with Autotools
       run: |
         ./configure
         make
         make dist
+        dpkg-buildpackage -us -uc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
